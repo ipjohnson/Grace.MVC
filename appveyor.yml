@@ -1,0 +1,24 @@
+environment:
+  build_version: 5.0.1
+version: $(build_version)-{build}
+configuration: Release
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '$(build_version).0'
+  assembly_file_version: '$(build_version).{build}'
+  assembly_informational_version: '$(build_version)'
+before_build:
+ - cmd: dotnet restore src/Grace.MVC4
+ - cmd: dotnet restore src/Grace.MVC5
+build:
+  project: Grace.MVC.sln
+  publish_nuget: true
+  publish_nuget_symbols: true
+  verbosity: minimal
+after_build:
+- cmd: dotnet pack src/Grace.MVC4/project.json -o . -c Release
+- cmd: dotnet pack src/Grace.MVC5/project.json -o . -c Release
+artifacts:
+- path: Grace*.nupkg
+  name: Grace
