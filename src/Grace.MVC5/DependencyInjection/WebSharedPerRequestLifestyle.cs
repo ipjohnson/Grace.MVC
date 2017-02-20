@@ -32,15 +32,16 @@ namespace Grace.MVC.DependencyInjection
         {
             return new WebSharedPerRequestLifestyle();
         }
+        
+        /// <summary>Generalization for lifestyle</summary>
+        public LifestyleType LifestyleType { get; } = LifestyleType.Scoped;
 
-        /// <summary>
-        /// Provide an expression that uses the lifestyle
-        /// </summary>
+        /// <summary>Provide an expression that uses the lifestyle</summary>
         /// <param name="scope">scope for the strategy</param>
         /// <param name="request">activation request</param>
         /// <param name="activationExpression">expression to create strategy type</param>
         /// <returns></returns>
-        public virtual IActivationExpressionResult ProvideLifestlyExpression(IInjectionScope scope, IActivationExpressionRequest request,
+        public IActivationExpressionResult ProvideLifestyleExpression(IInjectionScope scope, IActivationExpressionRequest request,
             Func<IActivationExpressionRequest, IActivationExpressionResult> activationExpression)
         {
             if (CompiledDelegate == null)
