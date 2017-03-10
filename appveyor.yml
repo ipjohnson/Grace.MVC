@@ -1,6 +1,6 @@
 environment:
-  build_version: 5.1.0
-  nuget_suffix: Nightly%APPVEYOR_BUILD_NUMBER%
+  build_version: 5.2.0
+  nuget_suffix: Beta%APPVEYOR_BUILD_NUMBER%
 version: $(build_version)-{build}
 configuration: Release
 assembly_info:
@@ -18,8 +18,8 @@ build:
   publish_nuget_symbols: true
   verbosity: minimal
 after_build:
-- cmd: dotnet pack src/Grace.MVC4/project.json -o . -c Release
-- cmd: dotnet pack src/Grace.MVC5/project.json -o . -c Release
+- cmd: dotnet pack src/Grace.MVC4/project.json -o . -c Release --version-suffix %nuget_suffix%
+- cmd: dotnet pack src/Grace.MVC5/project.json -o . -c Release --version-suffix %nuget_suffix%
 artifacts:
 - path: Grace*.nupkg
   name: Grace
