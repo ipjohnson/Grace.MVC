@@ -1,7 +1,7 @@
 {
   "version": "5.2.0-*",
   "dependencies": {
-    "Grace": "5.1.0"
+    "Grace": "5.2.0-Beta427"
   },
 
   "frameworks": {
