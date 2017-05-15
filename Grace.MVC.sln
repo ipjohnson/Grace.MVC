@@ -1,18 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6F8D8084-67BA-472F-BCB9-555F5061169C}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Grace.MVC4", "src\Grace.MVC4\Grace.MVC4.xproj", "{E1F612B7-9BAD-445C-A07E-56036B54B18B}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Grace.MVC5", "src\Grace.MVC5\Grace.MVC5.xproj", "{E3221AA8-0E84-4DB0-B6A4-C85ABDDB1A84}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{264AEBD8-561B-4159-A152-837514624956}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grace.MVC4", "src\Grace.MVC4\Grace.MVC4.csproj", "{E1F612B7-9BAD-445C-A07E-56036B54B18B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grace.MVC5", "src\Grace.MVC5\Grace.MVC5.csproj", "{E3221AA8-0E84-4DB0-B6A4-C85ABDDB1A84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
