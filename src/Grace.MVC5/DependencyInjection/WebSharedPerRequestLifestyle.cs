@@ -88,7 +88,7 @@ namespace Grace.MVC.DependencyInjection
                     return (T)value;
                 }
 
-                value = creationDelegate(scope, MVCDisposalScopeProvider.GetDisposalScopeFromHttpContext(scope), null);
+                value = creationDelegate(scope, scope, null);
 
                 HttpContext.Current.Items[uniqueId] = value;
 
