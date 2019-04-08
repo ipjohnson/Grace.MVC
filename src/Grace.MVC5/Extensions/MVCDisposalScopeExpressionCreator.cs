@@ -10,7 +10,7 @@ using Grace.DependencyInjection;
 using Grace.DependencyInjection.Impl;
 using Grace.DependencyInjection.Impl.Expressions;
 
-namespace Grace.MVC5.Extensions
+namespace Grace.MVC.Extensions
 {
     /// <summary>
     /// Disposal expression creator that uses mvc 

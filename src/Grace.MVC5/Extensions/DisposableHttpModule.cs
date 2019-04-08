@@ -22,7 +22,7 @@ namespace Grace.MVC.Extensions
 
         private void ContextOnEndRequest(object sender, EventArgs eventArgs)
         {
-            MVCDisposalScopeProvider.DisposeScopeInHttpContext();
+            MVCDisposalScopeExpressionCreator.DisposeScopeInHttpContext();
         }
     }
 }
